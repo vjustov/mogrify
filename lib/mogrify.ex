@@ -97,6 +97,10 @@ defmodule Mogrify do
   def resize(image, params) do
     %{image | operations: image.operations ++ [resize: params]}
   end
+  
+  def grayscale(image, params) do
+    %{image | operations: image.operations ++ [grayscale: params]}
+  end
 
   @doc """
   Extends the image to the specified dimensions
