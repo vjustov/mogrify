@@ -98,7 +98,7 @@ defmodule Mogrify do
     %{image | operations: image.operations ++ [resize: params]}
   end
   
-  def grayscale(image, params) do
+  def grayscale(image, params \\ nil) do
     %{image | operations: image.operations ++ [grayscale: params]}
   end
 
