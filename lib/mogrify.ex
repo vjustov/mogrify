@@ -102,6 +102,10 @@ defmodule Mogrify do
     %{image | operations: image.operations ++ [:grayscale]}
   end
   
+  def monochrome(image) do
+    %{image | operations: image.operations ++ [:monochrome]}
+  end 
+  
   def grayscale(image, params \\ nil) do
     %{image | operations: image.operations ++ [grayscale: params]}
   end
